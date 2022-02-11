@@ -31,7 +31,16 @@ header nav{
     /* justify-content: space-between; */
     justify-content: space-around;
     color: white;
-    
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color:white ;
+    color: rgba(24, 23, 23, 0.69);
 }
 
 /* Main design */
@@ -46,18 +55,29 @@ main{
 main .introduction{
     flex: 2.5;
     text-transform: capitalize;
-    font-size: 28px;
+    font-size: 18px;
+  
 }
 
 main .introduction p.intro{
     color: white;
-    border:solid rgba(16, 143, 47, 0.69) 10px;
+    border:solid rgba(98, 139, 108, 0.69) 1px;
+    border-radius: 10px;
+    background-color: rgba(59, 58, 58, 0.69);
     margin-left: 100px; 
+    /* width: 500px; */
+
   /* margin-top: 2px;  */
 }
 main .introduction p.intro.A{
   margin-bottom: 10px; 
+  font-size: 24px;
+  width: 500px;
   /* background-color: red; */
+}
+
+main span{
+    color: rgba(235, 137, 8, 0.69);
 }
 main .introduction p.intro.B{
   margin-top: 30px; 
@@ -83,6 +103,126 @@ main .image{
 
 /* footer design */
 footer{
+    display: flex;
+    flex-direction: row;
     height: 22vh;
     background-color: rgba(40, 43, 39, 0.99);
 }
+
+footer .part-one{
+    flex: 1;
+    display: flex;
+    border-right: 2px solid black;
+    flex-direction: column;
+}
+
+footer .part-one .newsletter{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+footer .part-one .newsletter p{
+    flex: 1;
+    margin: 10px 0 0 20px;
+    color: white;
+}
+footer .part-one .newsletter input[type="email"]{
+    flex: 0.85;
+    margin-left: 10px;
+    max-height: 22px; 
+    margin-top: 8px;
+    border-radius: 5px;
+    outline-style: none;
+}
+footer .part-one .newsletter input[type="button"]{
+    background-color:rgba(235, 137, 8, 0.69);
+    margin-left: 2px;
+    flex: 0.45;
+    max-height: 27px; 
+    margin-top: 10px;
+    border-radius: 5px;
+    outline-style: none;
+    margin-right: 4px;
+    color: white;
+    
+}
+
+footer .part-one .socialmedia{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    /* border-top: solid red 2px; */
+}
+footer .part-one .icons{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+footer .part-one .socialmedia p{
+    color: rgba(219, 73, 15, 0.68);
+    margin-left: 30px;
+    margin-bottom: 3px;
+    margin-top: 0;
+}
+footer .part-one .socialmedia img{
+    width: 30px;
+    margin: 5px 10px 10px 5px;
+}
+
+footer .part-two{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+footer .part-two .content{
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    list-style:none;
+}
+li::before{
+    content: "\00BB";
+}
+
+/* Skills */
+
+main.skills{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+main.skills .title{
+    flex: 0.2;
+    align-content: center;
+    justify-content: center;
+}
+main.skills .mechanical{
+    flex: 1;
+    background-color: yellow;
+}
+main.skills .software{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: green;
+}
+.content-skills{
+    display: flex;
+    flex-direction: row;
+}
+
+.content-skills h3{
+    flex: 0.75
+}
+
+.content-skills p
