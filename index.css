@@ -12,9 +12,13 @@ body{
  /* header design */
 header{
     min-height: 8vh;
-    background-color: rgba(24, 23, 23, 0.69);
+    background-color: rgba(24, 23, 23, 1);
     display: flex;
     flex-direction: row;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
 }
 
 header img{
@@ -46,6 +50,7 @@ a:hover{
 /* Main design */
 
 main{
+    margin-top: 8vh;
     height: 70Vh;
     background-color: rgba(59, 58, 58, 0.69);
     display: flex;
@@ -193,6 +198,10 @@ li::before{
     content: "\00BB";
 }
 
+footer .part-two .header{
+    font-size: 20px;
+}
+
 /* Skills */
 
 main.skills{
@@ -202,27 +211,199 @@ main.skills{
     /* justify-content: space-around; */
 }
 main.skills .title{
-    flex: 0.2;
-    align-content: center;
-    justify-content: center;
+    flex: 0.1;
+    /* background-color: red; */
+    text-align: center;
+    margin:2px 20px 0 20px;
+    padding-top: 30px;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+main.skills .title:hover{
+    background-color: red;
 }
 main.skills .mechanical{
     flex: 1;
-    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    /* background-color: yellow; */
+    margin:2px 20px 0 20px;
+    border: solid 2px rgba(98, 139, 108, 0.69);
+    padding-left: 10px;
 }
 main.skills .software{
     flex: 1;
     display: flex;
     flex-direction: row;
-    background-color: green;
+    /* background-color: green; */
+    margin:2px 20px 30px 20px;
+    border: solid 2px rgba(98, 139, 108, 0.69);
+    padding-left: 10px;
+    
 }
 .content-skills{
+   flex: 1;
+}
+
+main.skills img{
+    flex: 0.45;
+    max-height: fit-content;
+    border-radius: 3%;
+}
+
+/* Services */
+
+main.services{
+    margin-top: 15vh;
     display: flex;
+    justify-content: left;
+    /* background-color: red; */
     flex-direction: row;
+    align-items:stretch;
 }
 
-.content-skills h3{
-    flex: 0.75
+main .subservices{
+    flex:1;
+    border: 3px black dashed;
+    display: flex;
+    flex-direction: column;
+    /* width: 30%; */
+    /* margin-left: 31px; */
 }
 
-.content-skills p
+main.services p{
+    padding-top: 45px;
+    padding: 45px 20px 5px 20px;
+    z-index: 2;
+    border: 3px solid rgb(0,0,0);
+    margin-left: 20px;
+    margin-right: 20px;
+    /* margin-bottom: px; */
+    min-height: 150px;
+    /* margin-top: ; */
+}
+main.services img{
+    z-index: 4;
+    width: 70px;
+    position: absolute;
+    top: 13vh;
+    left:13vw;
+    /* border:rgb(14, 14, 13) solid 2px; */
+    border-radius: 50%;
+} 
+.subservices .one img{
+    z-index: 4;
+    width: 70px;
+    position: absolute;
+    top: 13vh;
+    left:21vw;
+    border:purple solid 2px;
+    border-radius: 50%;
+}
+.subservices .two img{
+    z-index: 4;
+    width: 70px;
+    position: absolute;
+    top: 50vh;
+    left: 72vw;
+    border:rgb(105, 128, 0) solid 2px;
+    border-radius: 50%;
+}
+.subservices .three img{
+    z-index: 4;
+    width: 70px;
+    position: absolute;
+    top: 13vh;
+    left: 72vw;
+    border:rgb(105, 128, 0) solid 2px;
+    border-radius: 50%;
+}
+.subservices .four img{
+    z-index: 4;
+    width: 70px;
+    position: absolute;
+    top:50vh;
+    left:21vw;
+    border:purple solid 2px;
+    border-radius: 50%;
+}
+
+.service.one p:hover{
+    background-color: purple;
+}
+.service.two p:hover{
+    background-color: purple;
+}
+.service.three p:hover{
+    background-color: rgb(105, 128, 0);
+}
+.service.four p:hover{
+    background-color: rgb(105, 128, 0);
+}
+.service.one p{
+    border:purple 2px solid;
+}
+.service.two p{
+    border:purple 2px solid;
+}
+.service.three p{
+ border:rgb(105, 128, 0) 2px solid;
+}
+.service.four p{
+ border:rgb(105, 128, 0) 2px solid;
+}
+b{
+    font-size: 30px;
+}
+
+/* Contact */
+
+fieldset{
+    margin-top: 8vh;
+    color: white;
+}
+
+fieldset legend{
+    /* margin-top: 30vh; */
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+
+textarea{
+    min-width: 400px;
+    min-height: 200px;
+    text-align: left;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+fieldset div input{
+    width: 353px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+}
+fieldset div input[type="submit"]{
+    /* width: fit-content; */
+    width: 70px;
+    height: 30px;
+    float: right;
+    border-radius: 10px;
+    background-color: rgba(235, 137, 8, 0.69);
+    color: white;
+    outline: none;
+    
+}
+
+fieldset .title {
+    color: white;
+    float: left;
+    width: 50px;
+    text-align: left;
+    padding-right: 10px;
+}
+   
