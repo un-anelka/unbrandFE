@@ -2,6 +2,7 @@ body{
     padding: 0;
     margin:0;
     background-color: rgba(24, 23, 23, 0.69);
+    background-repeat: no-repeat;
 }
  div.container{
     display: flex;
@@ -23,9 +24,10 @@ header{
 
 header img{
     flex: 0.2;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    /* height: 40px; */
     padding: 10px 0 0 10px;
+    margin-top: 11px;
 }
 header nav{
     flex:5;
@@ -42,6 +44,10 @@ a{
     text-decoration: none;
 }
 
+a#logo:hover{
+    /* background-color: yellow; */
+    background-color: rgba(24, 23, 23, 0.69);
+}
 a:hover{
     background-color:white ;
     color: rgba(24, 23, 23, 0.69);
@@ -405,5 +411,152 @@ fieldset .title {
     width: 50px;
     text-align: left;
     padding-right: 10px;
+    overflow:none;
 }
    
+/* Blog */
+.blogs{
+    margin-top: 10vh;
+    display: flex;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+
+.blogs-main{
+    /* background-color:rgb(105, 128, 0); */
+    flex:1.5;
+}
+
+.blogs-side{
+    flex: 1;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+}
+
+.blogs-side .search{
+    flex: 1;
+}
+.blogs-side .recent{
+    flex: 1;
+}
+.blogs-side .categories{
+    flex: 1;
+}
+
+.blogs-main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+}
+
+.blogs-main .blog{
+    flex: 1;
+    /* background-color: rgb(8, 131, 29); */
+    border:2px dashed red;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px 0 10px;
+    max-height: 100px;
+    /* margin-bottom: 10px; */
+}
+
+.blog p{
+    color: white;
+    flex: 1;
+    max-height: 100px;
+    padding: 0 20px;
+    /* overflow: auto; */
+}
+.blog img{
+    width: 90px;
+    margin-left: 10px;
+    border-radius: 2px;
+    /* padding: 20px; */
+}
+img.comment{
+    width: 20px;
+    position: relative;
+    top:-27px;
+    left: 200px;
+}
+
+.blogs-side .search{
+    margin-left: 40px;
+    margin: 23px 40px 0 80px; 
+    position: absolute;
+    top: 70px;
+    right:0;
+    height: 40px;
+    /* background-color: red; */
+}
+
+.blogs-side .search form{
+    height: 40px;
+    /* background: #FFFFFF; */
+    /* width: 20px; */
+}
+.blogs-side .search form input[type="text"]{
+    height: 24px;
+    background: white;
+    border-radius: 2px;
+    outline: hidden;
+}
+.blogs-side .search form button{
+    height: 29px;
+    background: white;
+}
+.blogs-side .recent{
+    max-height: 300px;
+    margin-top: 70px;
+    background-color: #c4c4c4;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+.blogs-side .recent h2{
+   color: rgb(12, 11, 11);
+   text-align: center;
+   padding:0;
+   margin-bottom: 0;
+   margin-top: 5px;
+}
+.blogs-side .recent .blog{
+    border:rgb(105, 128, 0) solid 2px;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    margin: 10px 20px 0 20px;
+}
+
+.blogs-side .recent .blog p{
+    /* color: rgb(13, 235, 42); */
+    flex: 1;
+    max-height: 60px;
+    padding: 0 20px;
+}
+.blogs-side .recent .blog img{
+    flex:0.25;
+}
+.blogs-side .categories{
+    height: 200px; 
+    margin-top: 20px;
+    margin-right: 40px;
+    border-radius: 20px;
+}
+
+.blogs-side .categories{
+    background-color: white;
+    max-height: 150px;
+}
+.blogs-side .categories h2{
+    text-transform: capitalize;
+    text-align: center;
+    color:#000000;
+}
+.blogs-side .categories ul{
+    text-transform: capitalize;
+    text-align: left;
+    color:#000000;
+}
