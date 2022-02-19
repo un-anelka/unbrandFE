@@ -1,0 +1,120 @@
+/* Dashboard */
+
+main.dashboard{
+    display: flex;
+    flex-direction: column;
+    min-height: 150vh;
+    /* margin: 1px */
+}
+
+.dashboard .createBlog{
+    flex: 0.5;
+    height:30vh;
+    /* background-color: yellowgreen; */
+}
+
+.createBlog form{
+    margin: 20px ;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(13, 127, 180); */
+}
+.createBlog form .addblog{
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    margin: 20px;
+    margin-bottom: 5px;
+}
+.createBlog form .addblog h2{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+.createBlog form .addblog textarea::placeholder{
+ 
+  color: rgba(255, 248, 248,0.6);
+}
+.createBlog form .addblog textarea{
+  min-height: 20px;
+  background-color: darkgray;
+  background-color: rgba(24, 23, 23, 0.69);
+  border: #c4c4c4 solid 2px;
+  color: white;
+}
+
+.createBlog form .upload{
+    border: #c4c4c4 solid 2px;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    /* background-color: yellow; */
+}
+.createBlog form .upload input[type="file"]{
+    flex: 1;
+    margin: 7px 0 7px 20px;
+    max-width: 200px;
+    cursor: pointer;
+    color: white;
+    /* border-right: #c4c4c4 solid 3px; */
+}
+ .createBlog form .upload input[type="submit"]{
+    flex: 1;
+    margin: 7px 0;
+    max-width: 70px;
+    position: relative; 
+    left:500px
+}
+
+
+main .blogdashboard{
+    flex:1.5;
+    /* background-color: palevioletred; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-y: scroll;
+}
+main .blogdashboard .bloglist{
+    /* background-color: yellow; */
+    width: 20%;
+    max-height: 185px;
+    margin: 30px;
+    margin-top: 40px;
+    padding: 20px;
+    border: #c4c4c4 solid 2px;
+}
+main .blogdashboard .bloglist h2{
+   margin-top: -10px;
+   color: white;
+}
+main .blogdashboard .bloglist img{
+   margin-top: -14px;
+   width: 100%;
+   margin-bottom: 6px;
+}
+main .blogdashboard .bloglist .delete{
+  background-color: red;
+  color: white;
+}
+main .blogdashboard .bloglist .update{
+  background-color: blue;
+  color: white;
+}
+main .blogdashboard .bloglist p{
+    position: relative;
+    color: white;
+    top: -35px;
+    left: 160px;
+    background-color: green;
+    width: 100px;
+    padding-left: 6px;
+}
+main .blogdashboard .bloglist span{
+   margin-right: 7px;
+   color: white;
+}

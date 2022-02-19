@@ -1,3 +1,5 @@
+@import url("./test.css");
+@import url("./dashboard.css");
 body{
     padding: 0;
     margin:0;
@@ -146,7 +148,7 @@ footer .part-one .newsletter input[type="email"]{
     border-radius: 5px;
     outline-style: none;
 }
-footer .part-one .newsletter input[type="button"]{
+footer .part-one .newsletter input[type="submit"]{
     background-color:rgba(235, 137, 8, 0.69);
     margin-left: 2px;
     flex: 0.45;
@@ -282,7 +284,7 @@ main.services p{
     padding-top: 45px;
     padding: 45px 20px 5px 20px;
     z-index: 2;
-    border: 3px solid rgb(0,0,0);
+    /* border: 3px solid rgb(0,0,0); */
     margin-left: 20px;
     margin-right: 20px;
     /* margin-bottom: px; */
@@ -380,7 +382,7 @@ fieldset legend{
 
 textarea{
     min-width: 400px;
-    min-height: 200px;
+    /* min-height: 200px; */
     text-align: left;
     border-radius: 5px;
     padding: 10px;
@@ -394,7 +396,7 @@ fieldset div input{
     outline: none;
 }
 fieldset div input[type="submit"]{
-    /* width: fit-content; */
+    margin-top: 10px;
     width: 70px;
     height: 30px;
     float: right;
@@ -454,15 +456,22 @@ fieldset .title {
 
 .blogs-main .blog{
     flex: 1;
-    /* background-color: rgb(8, 131, 29); */
-    border:2px dashed red;
+    border: #c4c4c4 solid 2px;
     display: flex;
     flex-direction: row;
+    /* flex-direction: column; */
     margin: 10px 10px 0 10px;
-    max-height: 100px;
-    /* margin-bottom: 10px; */
-}
+    max-height: 250px;
+    border-radius: 5px;
 
+}
+/* button#myBtn{
+    background-color: orange;
+    height: 30px;
+    position: relative;
+    top: 190px;
+    right: 590px
+} */
 .blog p{
     color: white;
     flex: 1;
@@ -495,18 +504,16 @@ img.comment{
 
 .blogs-side .search form{
     height: 40px;
-    /* background: #FFFFFF; */
-    /* width: 20px; */
 }
 .blogs-side .search form input[type="text"]{
     height: 24px;
-    background: white;
+    background: #c4c4c4;
     border-radius: 2px;
     outline: hidden;
 }
 .blogs-side .search form button{
     height: 29px;
-    background: white;
+    background: #c4c4c4;
 }
 .blogs-side .recent{
     max-height: 300px;
@@ -531,7 +538,7 @@ img.comment{
 }
 
 .blogs-side .recent .blog p{
-    /* color: rgb(13, 235, 42); */
+    color: rgb(17, 17, 17);
     flex: 1;
     max-height: 60px;
     padding: 0 20px;
@@ -547,7 +554,7 @@ img.comment{
 }
 
 .blogs-side .categories{
-    background-color: white;
+    background-color: #c4c4c4;
     max-height: 150px;
 }
 .blogs-side .categories h2{
@@ -559,4 +566,152 @@ img.comment{
     text-transform: capitalize;
     text-align: left;
     color:#000000;
+}
+
+
+/* SignIn */
+
+.signIn fieldset .title {
+    width: 90px;
+}
+.signIn fieldset p{
+    margin-top: 30px;
+    margin-left: 100px;
+}
+.signIn fieldset a:hover{
+    background-color:rgba(59, 58, 58, 0.69);
+}
+
+
+
+@media screen and  (max-width:400px) {
+    div.container{
+        display: flex;
+        flex-direction: column;
+     }
+    
+     /* header design */
+    header{
+        display: flex;
+        flex-direction: row;
+        z-index: 10;
+    }
+    
+    header nav{
+        /* margin-left: 20px;
+       flex:5; 
+        display: flex;
+        flex-direction: column;
+        color: #c4c4c4;
+        background-color: yellow; */
+        display: none;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        background-color: green;
+        min-height: 150vh;
+    }
+
+    main .introduction{
+        flex: 1;
+        order: 1;
+        margin-top: -2vh;
+        
+    }
+    main .introduction p.intro{
+        margin: 20px;
+        margin-top: 60px;
+        padding: 10px;
+        max-width: 323px;
+        font-size: 16px;
+    }
+    main .image{
+        flex: 1;
+    }
+    main .image img{
+        padding-top: 30px;
+        margin-top: 20px;
+        max-width: 100%;
+        margin-left: -45px;
+        margin-bottom: -100px;
+        border-radius: 20%;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        max-width: 100vh;
+        min-height: 400px;
+    }
+
+    footer .part-one{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        /* background-color: darkcyan; */
+        border-bottom: #c4c4c4 solid 2px;
+    }
+
+    footer .part-one .newsletter{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-left: 1px;
+        /* background-color: darkcyan; */
+        margin-right: 20px;
+        align-items: center;
+      
+    }
+    footer .part-one .newsletter p{
+        padding-right:10px;
+    }
+    footer .part-one .newsletter input[type="email"]{
+        /* background-color: palegreen; */
+        width: 320px;
+        margin-bottom: -10px;
+        min-height: 30px;
+   
+    }
+    footer .part-one .newsletter input[type="submit"]{
+        width: 328px;
+        margin-left: 40px;
+        margin-right:30px;
+        margin-top:2px;
+        background-color: rgba(235, 137, 8, 0.69);
+        margin-bottom: 20px;
+        min-height: 30px;
+        border-radius: 3px;
+    }
+
+
+    footer .part-one .socialmedia{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        /* background-color: rgb(51, 214, 51); */
+    }
+    
+    footer .part-one .socialmedia p{
+        width:200px;
+        margin-bottom: 10px;
+        /* background-color: #000000; */
+        color:rgba(235, 137, 8, 0.69);
+        align-items: center;
+        margin-left: 10px;
+    }
+    footer .part-one .socialmedia .icons{
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    footer .part-two{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        /* background-color: violet; */
+    }
+
+    
 }

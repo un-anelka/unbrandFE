@@ -17,36 +17,45 @@
                 <a href="./services.html"><h2>Services</h2></a>
                 <a href="./ContactUs.html"><h2>Contact</h2></a>
                 <a href="./blog.html"><h2>Blogs</h2></a>
-                <a href="./Skills.html"><h2>Sign In</h2></a>    
+                <a href="./SignIn.html"><h2>Sign In</h2></a>    
                 
             </nav>
+            <div class="menu" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </header>
     
-        <main>
-          <div class="introduction">
-            <p class="intro A">
-                Hi, <span> I’m UN François RUDASINGWA</span>, a mechanical engineer by professional and Web developer by passion.
-                Having been born in rural area was like a reason for me not to success but I thrilled to announce that I was enrightned. 
-            </p>
-            <p class="intro B">
-I have a three years experience working with mechanical systems design and maintenance, I have worked on differnt projects suchs Pico Hydropower plants, Smart Wheelchair,  Gir’Ubuzima Box and more.
-
-Apart from mechanical enginering, I am a full stack web developer focused on improing the web user experience.
-
-I do captive portal as well as remote monitoring of solar systems.
-            </p>
-          </div>
-          <div class="image">
-              <img src="./images/UN's Personal.jpg" alt="Put UN Image">
-          </div>
-    
+        <main class="signIn">
+            <!-- <form action="./dashboard.html" method="post"> -->
+            <form action="./dashboard.html" method="get">
+                <fieldset>
+                    <legend>SignIn</legend>
+                    <div>
+                        <label for="username" class="title">Username:</label>
+                        <input type="email" id="username" name="username" />
+                    </div> <br>
+                    <div>
+                        <label for="password" class="title">Password:</label>
+                        <input type="password" id="password name="password />
+                    </div>
+                    <div>
+                        <input type="submit" value="SignIn" id="submit" />
+                    </div>
+                    <div>
+                        <p>New user? <a id="signIn" href="./SignUp.html"><span>   Create an account</span></a> </p>
+                    </div>
+                </fieldset>    
+            </form>
         </main>
+       
         <footer>
             <div class="part-one">
                 <div class="newsletter">
                     <p> Sign Up to our newsletter for the latest technology information</p>
                     <input type="email" placeholder="Email address">
-                    <input type="button" value="Subscribe">
+                    <input type="submit" value="Subscribe">
                 </div>
                 <div class="socialmedia">
                     <p> Social Media</p>

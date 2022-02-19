@@ -7,6 +7,11 @@
     <title>UN R's Personal || Blogs</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #more{
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -19,59 +24,33 @@
                 <a href="./services.html"><h2>Services</h2></a>
                 <a href="./ContactUs.html"><h2>Contact</h2></a>
                 <a href="./blog.html"><h2>Blogs</h2></a>
-                <a href="./Skills.html"><h2>Sign In</h2></a>    
-                
+                <a href="./SignIn.html"><h2>Sign In</h2></a> 
             </nav>
+            <div class="menu" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </header>
     
         <main class="blogs">
           <div class="blogs-main">
               <div class="blog one">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                      Nemo totam fugit cupiditate impedit nesciunt, possimus labore saepe
-                      eaque. Reiciendis, exercitationem sed. Quasi iusto eaque at 
-                      temporibus facere corporis a sapiente! <span>Read more...</span> 
-                      <button type="submit"><i class="fa fa-comment" style="color: rgb(236, 83, 12);"></i></button>
-                </p>
-                <img src="./images/carbon-block.jpg" alt="Hello UN R.">
+                <div class="textbutton">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Nemo totam fugit cupiditate impedit nesciunt, possimus labore saepe
+                            eaque. Reiciendis, exercitationem sed. Quasi iusto eaque at 
+                            temporibus facere corporis a sapiente! <span id="dots">...</span> <span id="more">erisque enim ligula venenatis dolor. 
+                            Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla 
+                            congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span>
+                            <button type="submit"><i class="fa fa-comment" style="color: rgb(236, 83, 12);"></i></button>
+                        </p>
+                        <button onclick="readMoreReadLess()" id="myBtn">Read more</button>
+                </div>
+                <div class="blogimage">
+                    <img src="./images/carbon-block.jpg" alt="Hello UN R.">
+                </div>
               </div>
-              <div class="blog one">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                      Nemo totam fugit cupiditate impedit nesciunt, possimus labore saepe
-                      eaque. Reiciendis, exercitationem sed. Quasi iusto eaque at 
-                      temporibus facere corporis a sapiente! <span>Read more...</span> 
-                      <button type="submit"><i class="fa fa-comment" style="color: rgb(236, 83, 12);"></i></button>
-                </p>
-                <img src="./images/carbon-block.jpg" alt="Hello UN R.">
-              </div>
-              <div class="blog one">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                      Nemo totam fugit cupiditate impedit nesciunt, possimus labore saepe
-                      eaque. Reiciendis, exercitationem sed. Quasi iusto eaque at 
-                      temporibus facere corporis a sapiente! <span>Read more...</span> 
-                      <button type="submit"><i class="fa fa-comment" style="color: rgb(236, 83, 12);"></i></button>
-                </p>
-                <img src="./images/carbon-block.jpg" alt="Hello UN R.">
-              </div>
-              <div class="blog one">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                      Nemo totam fugit cupiditate impedit nesciunt, possimus labore saepe
-                      eaque. Reiciendis, exercitationem sed. Quasi iusto eaque at 
-                      temporibus facere corporis a sapiente! <span>Read more...</span> 
-                      <button type="submit"><i class="fa fa-comment" style="color: rgb(236, 83, 12);"></i></button>
-                </p>
-                <img src="./images/carbon-block.jpg" alt="Hello UN R.">
-              </div>
-              <div class="blog one">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                      Nemo totam fugit cupiditate impedit nesciunt, possimus labore saepe
-                      eaque. Reiciendis, exercitationem sed. Quasi iusto eaque at 
-                      temporibus facere corporis a sapiente! <span>Read more...</span> 
-                      <button type="submit"><i class="fa fa-comment" style="color: rgb(236, 83, 12);"></i></button>
-                </p>
-                <img src="./images/carbon-block.jpg" alt="Hello UN R.">
-              </div>
-              
              
          </div>
           <div class="blogs-side">
@@ -118,7 +97,7 @@
                 <div class="newsletter">
                     <p> Sign Up to our newsletter for the latest technology information</p>
                     <input type="email" placeholder="Email address">
-                    <input type="button" value="Subscribe">
+                    <input type="submit" value="Subscribe">
                 </div>
                 <div class="socialmedia">
                     <p> Social Media</p>
