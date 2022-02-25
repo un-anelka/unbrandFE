@@ -7,7 +7,7 @@
     <title>UN R's Personal || SignUp</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body >
     <div class="container">
         <header>
             <a href="./index.html"><img src="./images/Developer.jfif" alt="Put logo such as UN R."></a>
@@ -33,11 +33,11 @@
                     <legend>SignUp</legend>
                     <div>
                         <label for="name" class="title">First Name:</label>
-                        <input type="text" id="name" name="name" />
+                        <input type="text" id="firstname" name="name" />
                     </div> <br>
                     <div>
                         <label for="name" class="title"> Last Name:</label>
-                        <input type="text" id="name" name="name" />
+                        <input type="text" id="lastname" name="name" />
                     </div> <br>
                     <div>
                         <label for="username" class="title">Email:</label>
@@ -45,14 +45,17 @@
                     </div> <br>
                     <div>
                         <label for="password" class="title">Create Password:</label>
-                        <input type="password" id="password name="password />
+                        <input type="password" id="password1" name="password" />
                     </div> <br>
                     <div>
                         <label for="password" class="title">Confirm Password:</label>
-                        <input type="password" id="password name="password />
+                        <input type="password" id="password2" name="password"/>
                     </div>
                     <div>
                         <input type="submit" value="SignUp" id="submit" />
+                    </div>
+                    <div class="error">
+                        <p id="error"></p>
                     </div>
                     <div>
                         <p> Already registered? <a id="signIn" href="./SignIn.html"><span>   Login</span></a> </p>
@@ -98,7 +101,11 @@
             </div>
         </footer>
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script> 
     <script src="index.js"></script>
+    <script src="./signUp.js"></script>
 </body>
 </html>

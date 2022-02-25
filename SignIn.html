@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UN R's Personal || SignIn</title>
+    <title>UN || SignIn</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -29,22 +29,25 @@
     
         <main class="signIn">
             <!-- <form action="./dashboard.html" method="post"> -->
-            <form action="./dashboard.html" method="get">
+            <form action="" method="get" class="login-form">
                 <fieldset>
                     <legend>SignIn</legend>
                     <div>
                         <label for="username" class="title">Username:</label>
-                        <input type="email" id="username" name="username" />
+                        <input type="email" id="username1" name="username1" />
                     </div> <br>
                     <div>
                         <label for="password" class="title">Password:</label>
-                        <input type="password" id="password name="password />
+                        <input type="password" id="password3" name="password3"/>
+                    </div>
+                    <div class="error">
+                        <p id="signInError"></p>
                     </div>
                     <div>
-                        <input type="submit" value="SignIn" id="submit" />
+                        <input type="submit" value="SignIn" id="submit1" />
                     </div>
                     <div>
-                        <p>New user? <a id="signIn" href="./SignUp.html"><span>   Create an account</span></a> </p>
+                        <p>New user? <a id="signIn1" href="./SignUp.html"><span>   Create an account</span></a> </p>
                     </div>
                 </fieldset>    
             </form>
@@ -89,6 +92,11 @@
         </footer>
     </div>
 
-    <script src="index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script> 
+    <script src="./index.js"></script>
+    <script src="./un.js"></script>
 </body>
 </html>
