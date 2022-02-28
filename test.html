@@ -5,25 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UN R's Personal || Blogs Test</title>
+    <title>UN R's Personal || Dashboard</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        #more {
-            display: none;
-        }
-
-        a .hide {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
         <header>
-            <!-- <a href="./index.html" class="logo" >UN Rdfgdsfgh</a> -->
-            <a href="./index.html" id="logo"><img src="./images/UN logo.JPG" alt="Put logo such as UN R."></a>
+            <a href="./index.html"><img src="./images/UN logo.JPG" alt="Put logo such as UN R."></a>
             <nav>
                 <a href="./index.html">
                     <h2>Home</h2>
@@ -40,65 +30,67 @@
                 <a href="./blog.html">
                     <h2>Blogs</h2>
                 </a>
-                <a href="./SignIn.html">
-                    <h2>Sign In</h2>
+                <!-- <a href="./SignIn.html" style="color: orange;"><h2>Sign Out</h2></a>     -->
+                <a href="" id="logout" style="color: orange;">
+                    <h2>Sign Out</h2>
                 </a>
+
             </nav>
-            <div class="menu" onclick="myFunction(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
         </header>
-       
 
-        <main class="blogs">
-            <div class="blogs-main">
-                <div class="blog one">
-                   
-
-                   
-                </div>
-            </div>
-            <div class="blogs-side">
-
-                <div class="search">
-                    <form class="example" action="action_page.php">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit"><i class="fa fa-search" style="color: rgb(236, 83, 12);"></i></button>
-                    </form>
-                </div>
-                <div class="recent">
-                    <h2>Recent blogs</h2>
-                    <div class="blog one">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Nemo totam fugit cupiditate impedit nesciunt?
-                        </p>
-                        <img src="./images/carbon-block.jpg" alt="Hello UN R.">
-                    </div>
-                    <div class="blog one">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Nemo totam fugit cupiditate impedit nesciunt?
-                        </p>
-                        <img src="./images/carbon-block.jpg" alt="Hello UN R.">
-                    </div>
-                    <div class="blog one">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Nemo totam fugit cupiditate impedit nesciunt?
-                        </p>
-                        <img src="./images/carbon-block.jpg" alt="Hello UN R.">
-                    </div>
-                </div>
-                <div class="categories">
-                    <h2>categories</h2>
+        <main class="dashboard">
+            <div class="usermanager">
+                <div class="tasklist">
                     <ul>
-                        <li>Mechanical Engineering</li>
-                        <li>Software Engineering</li>
-                        <li>Energy Engineering</li>
+                        <li>Users</li>
+                        <li>Subscription</li>
+                        <li>Blogs</li>
+
                     </ul>
                 </div>
+
+                <div class="createBlog">
+
+                    <form class="addblog" action="">
+                        <div class="blogtext">
+                            <!-- <h2>User dashboard</h2> -->
+                            <input type="text" id="namebox" placeholder="What is in your mind?">
+                            <select name="category" id="category">
+                                <option value="novalue"></option>
+                                <option value="mechanical engineering">mechanical engineering</option>
+                                <option value="Software engineering">software engineering</option>
+                                <option value="energy engineering">energy engineering</option>
+                            </select>
+
+                        </div>
+                        <div class="blogupload">
+
+                            <div class="imageinfo">
+                                <img id="myimg"> <br>
+                                <label id="UpProgress"></label>
+                            </div>
+                            <div class="uploadstatus">
+                                <button id="select">Select</button>
+                                <button id="upload">Upload</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
             </div>
+            <div class="blogmanager">
+
+                <div class="blogdashboard">
+                    <div class="bloglist">
+              
+                    </div>
+
+                </div>
+
         </main>
+
         <footer>
             <div class="part-one">
                 <div class="newsletter">
@@ -137,13 +129,15 @@
             </div>
         </footer>
     </div>
+
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
-    <script src="./test.js"></script>
     <script src="index.js"></script>
+    <script src="./dashboard.js"></script>
+
 </body>
 
 </html>
