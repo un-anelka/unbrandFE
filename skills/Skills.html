@@ -5,20 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UN R's Personal || Skills</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="skills.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <a href="./index.html"><img src="./images/UN logo.JPG" alt="Put logo such as UN R."></a>
+            <!-- <a href="./index.html" class="logo" >UN Rdfgdsfgh</a> -->
+            <a href="../index.html" id="logo"><img src="../images/UN logo.JPG" alt="Put logo such as UN R."></a>
             <nav>
-                <a href="./index.html"><h2>Home</h2></a>
-                <a href="./Skills.html"><h2>Skills</h2></a>
-                <a href="./services.html"><h2>Services</h2></a>
-                <a href="./ContactUs.html"><h2>Contact</h2></a>
-                <a href="./blog.html"><h2>Blogs</h2></a>
-                <a href="./SignIn.html"><h2>Sign In</h2></a>    
-                
+                <a href="../index.html">
+                    <h2>Home</h2>
+                </a>
+                <a href="../skills/Skills.html">
+                    <h2>Skills</h2>
+                </a>
+                <a href="../services/services.html">
+                    <h2>Services</h2>
+                </a>
+                <a href="../Contacts/contacts.html">
+                    <h2>Contact</h2>
+                </a>
+                <a href="../Blogs/blogs.html">
+                    <h2>Blogs</h2>
+                </a>
+                <a href="../signin/SignIn.html">
+                    <h2>Sign In</h2>
+                </a>
             </nav>
             <div class="menu" onclick="myFunction(this)">
                 <div class="bar1"></div>
@@ -37,7 +49,7 @@
                     <h3>Mechanical Engineering</h3>
                     <p>PostgreSQL • Mongo DB • Express JS • Node JS • HTML • CSS • Vanilla JS • REACT/REDUX • CI & CD • TDD • BOOTSTRAP • MATERIAL UI • FIREBASE • SOCKETS.IO • Agile/Scrum methodology • Performance and scalability • Optimization • API design • Responsive design • Debugging • Server-side scripting • OOP</p>
                 </div>
-                <img width="300px" src="./images/Mechanical engineering.jpg" alt="">
+                <img width="300px" src="../images/Mechanical engineering.jpg" alt="">
                 <!-- <img width="300px" src="" alt="Hello pleae enter the image"> -->
             </div>
             <div class="software">
@@ -45,7 +57,7 @@
                     <h3>Software Engineering and Web Development </h3>
                     <p>PostgreSQL • Mongo DB • Express JS • Node JS • HTML • CSS • Vanilla JS • REACT/REDUX • CI & CD • TDD • BOOTSTRAP • MATERIAL UI • FIREBASE • SOCKETS.IO • Agile/Scrum methodology • Performance and scalability • Optimization • API design • Responsive design • Debugging • Server-side scripting • OOP</p>
                 </div>
-                <img width="300px" src="./images/Web development.jpg" alt="">
+                <img width="300px" src="../images/Web development.jpg" alt="">
                 <!-- <img width="300px" src="" alt="Hello pleae enter the image"> -->
             </div>
 
@@ -55,8 +67,8 @@
             <div class="part-one">
                 <div class="newsletter">
                     <p> Sign Up to our newsletter for the latest technology information</p>
-                    <input type="email" placeholder="Email address">
-                    <input type="submit" value="Subscribe">
+                    <input type="email" placeholder="Email address" id="subText"> <br>
+                    <input type="submit" value="Subscribe" id="subSend">
                 </div>
                 <div class="socialmedia">
                     <p> Social Media</p>
@@ -91,5 +103,6 @@
     </div>
 
     <script src="index.js"></script>
+    <script src="skills.js"></script>
 </body>
 </html>

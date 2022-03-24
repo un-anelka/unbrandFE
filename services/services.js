@@ -20,4 +20,7 @@ submit.addEventListener("click", (e)=>{
         location.reload();
     })
 
+// console.log("clicked")
+// console.log(subText.value)
+
 })

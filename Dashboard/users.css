@@ -1,0 +1,86 @@
+*{
+    color: white;
+    box-sizing: border-box;
+}
+
+
+
+main{
+    display: block;
+    align-items: center;
+    font-size: 18px;
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+
+
+main h1{
+    border: 2px solid #c4c4c4;
+    width: 60%;
+    margin-left: 250px;
+    padding-left: 50px;
+
+}
+main ul{
+    border: 2px solid #c4c4c4;
+    width: 60%;
+    margin-left: 250px;
+
+}
+
+main ul li{
+    border: 2px solid #c4c4c4;
+    margin: 10px;
+}
+main ul li label {
+    display: inline-block;
+    width: 100px;
+    margin-right: 3px;
+    padding-left: 10px;
+    /* border-right: red solid 4px;  */
+}
+main label.input {
+    display: block;
+    width: 200px;
+    margin-left: 250px;
+    /* margin-bottom: 40px; */
+
+}
+main input {
+    display: block;
+    min-width: 300px;
+    height: 30px;
+    color: black;
+    padding-left: 20px;
+    margin-left: 250px;
+}
+main ul li button{
+    min-width: 100px;
+    color: black;
+}
+main ul li span{
+    display: inline-block;
+    width: 300px;
+    color: white
+}
+li::before{
+    content: normal;
+}
+
+
+.dashboard-side ul{
+    /* border: none; */
+    position: relative;
+    top:-136px;
+    width: 300px;
+}
+.dashboard-side ul li{
+    border: none;
+}
+
+.update-side{
+    position: relative;
+    left: 400px;
+    width: 600px;
+    /* background-color: tan; */
+}

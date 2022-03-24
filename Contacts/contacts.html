@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UN || SignIn</title>
-    <link rel="stylesheet" href="index.css">
+    <title>UN R's Personal || Contact Us</title>
+    <link rel="stylesheet" href="./contacts.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <a href="./index.html"><img src="./images/UN logo.JPG" alt="Put logo such as UN R."></a>
+            <!-- <a href="./index.html" class="logo" >UN Rdfgdsfgh</a> -->
+            <a href="../index.html" id="logo"><img src="../images/UN logo.JPG" alt="Put logo such as UN R."></a>
             <nav>
-                <a href="./index.html"><h2>Home</h2></a>
-                <a href="./Skills.html"><h2>Skills</h2></a>
-                <a href="./services.html"><h2>Services</h2></a>
-                <a href="./ContactUs.html"><h2>Contact</h2></a>
-                <a href="./blog.html"><h2>Blogs</h2></a>
-                <a href="./SignIn.html"><h2>Sign In</h2></a>    
-                
+                <a href="../index.html">
+                    <h2>Home</h2>
+                </a>
+                <a href="../skills/Skills.html">
+                    <h2>Skills</h2>
+                </a>
+                <a href="../services/services.html">
+                    <h2>Services</h2>
+                </a>
+                <a href="../Contacts/contacts.html">
+                    <h2>Contact</h2>
+                </a>
+                <a href="../Blogs/blogs.html">
+                    <h2>Blogs</h2>
+                </a>
+                <a href="../signin/SignIn.html">
+                    <h2>Sign In</h2>
+                </a>
             </nav>
             <div class="menu" onclick="myFunction(this)">
                 <div class="bar1"></div>
@@ -27,32 +39,28 @@
             </div>
         </header>
     
-        <main class="signIn">
-            <!-- <form action="./dashboard.html" method="post"> -->
-            <form action="" method="get" class="login-form">
+        <main class="Contacts">
+            <form action="example.php" method="post">
                 <fieldset>
-                    <legend>SignIn</legend>
+                    <legend>Contacts</legend>
                     <div>
-                        <label for="username" class="title">Username:</label>
-                        <input type="email" id="username1" name="username1" />
+                        <label for="name" class="title">Name:</label>
+                        <input type="text" id="name" name="name" />
                     </div> <br>
                     <div>
-                        <label for="password" class="title">Password:</label>
-                        <input type="password" id="password3" name="password3"/>
-                    </div>
-                    <div class="error">
-                        <p id="signInError"></p>
+                        <label for="email" class="title">Email:</label>
+                        <input type="email" id="email" name="email" />
+                    </div> <br>
+                    <div>
+                        <textarea name="message" id="message" cols="30" rows="10">Please enter the message.
+                        </textarea>
                     </div>
                     <div>
-                        <input type="submit" value="SignIn" id="submit1" />
-                    </div>
-                    <div>
-                        <p>New user? <a id="signIn1" href="./SignUp.html"><span>   Create an account</span></a> </p>
+                        <input type="submit" value="Submit" id="submit" />
                     </div>
                 </fieldset>    
             </form>
         </main>
-       
         <footer>
             <div class="part-one">
                 <div class="newsletter">
@@ -63,9 +71,9 @@
                 <div class="socialmedia">
                     <p> Social Media</p>
                     <div class="icons">
-                        <img src="./images/Black-icon-Twitter-logo-transparent-PNG.png" alt="">
-                        <img src="./images/linkedin_black_logo_icon_147114.png" alt="">
-                        <img src="./images/github icon.png" alt="">
+                        <img src="../images/Black-icon-Twitter-logo-transparent-PNG.png" alt="">
+                        <img src="../images/linkedin_black_logo_icon_147114.png" alt="">
+                        <img src="../images/github icon.png" alt="">
                     </div>
                     
                 </div>
@@ -92,11 +100,6 @@
         </footer>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script> 
-    <script src="./index.js"></script>
-    <script src="./un.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UN R's Personal || Home</title>
-    <link rel="stylesheet" href="index.css">
+    <title>UN R's Personal || Dashboard_Users</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="./users.css">
+    <style>
+        p {
+            display: inline;
+        }
+    </style>
 </head>
-<body>
 
+<body>
     <div class="container">
         <header>
             <!-- <a href="./index.html" class="logo" >UN Rdfgdsfgh</a> -->
@@ -29,8 +36,8 @@
                 <a href="../Blogs/blogs.html">
                     <h2>Blogs</h2>
                 </a>
-                <a href="../signin/SignIn.html">
-                    <h2>Sign In</h2>
+                <a href="#" id="logout">
+                    <h2>SignOut</h2>
                 </a>
             </nav>
             <div class="menu" onclick="myFunction(this)">
@@ -39,26 +46,50 @@
                 <div class="bar3"></div>
             </div>
         </header>
+       
         <main>
-          <div class="introduction">
-            <p class="intro A">
-                Hi, <span> I’m UN François RUDASINGWA</span>, a mechanical engineer by professional and Web developer by passion.
-                Having been born in rural area was like a reason for me not to success but I thrilled to announce that I was enrightned. 
-            </p>
-            <p class="intro B">
-I have a three years experience working with mechanical systems design and maintenance, I have worked on differnt projects suchs Pico Hydropower plants, Smart Wheelchair,  Gir’Ubuzima Box and more.
+            <div class="update-side" >
+                <h1><span id="usercount"> number of users</span> USERS </h1>
+                <label class="input" for="input"> Firstname</label><input type="text" id="firstname">
+                <label class="input" for="input"> Lastname</label><input type="text"id="lastname">
+                <label class="input" for="input"> Email</label><input type="email" id="email">
+                <label class="input" for="input"> Role</label><input type="text" id="role">
+            </div>
+            <div class="dashboard-side" >
+                <ul>
+                    <li><a href="./users.html">Users</a></li>
+                    <li><a href="./subscription.html"> Subscription </a></li>
+                    <li><a href="./test.html"> Blogs </a></li>
+                    <li><a href="./messages.html"> Contacts </a></li>
+                </ul>
+            </div>
 
-Apart from mechanical enginering, I am a full stack web developer focused on improing the web user experience.
+            <div class="userList">
+                <!-- <ul class="user">
+                    <li class="Firstname">
+                        <label for="Firstname">Firstname</label>: <span>admin</span>
+                    </li>
+                    <li class="Lastname">
+                        <label for="Lastname">Lastname</label>: <span>admin</span>
+                    </li>
+                    <li class="Email">
+                        <label for="Email">Email</label>: <span>admin</span>
 
-I do captive portal as well as remote monitoring of solar systems.
-            </p>
-          </div>
-          <div class="image">
-              <img src="./images/UN's Personal.jpg" alt="Put UN Image">
-          </div>
-    
+                    </li>
+                    <li class="Role">
+                        <label for="role">Role</label>: <span>admin</span>
+                        
+                    </li>
+                    <li class="button">
+                        <button>editUser</button>
+                        <button>editUser</button>
+                        <button>updateUser</button>
+                    </li>
+                </ul> -->
+            </div>
+
         </main>
-        
+
         <footer>
             <div class="part-one">
                 <div class="newsletter">
@@ -98,6 +129,10 @@ I do captive portal as well as remote monitoring of solar systems.
         </footer>
     </div>
 
-    <script src="index.js"></script>
+    <script src="users.js"></script>
+
+
+
 </body>
+
 </html>

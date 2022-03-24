@@ -1,0 +1,84 @@
+body{
+    background-color: rgba(24, 23, 23, 0.69);
+}
+main{
+    margin-top: 9vh;
+    display: block;
+    /* flex-direction: column; */
+    min-height: 100vh;
+    overflow-y: scroll;
+    color:white; 
+    /* margin-bottom: 20px; */
+}
+.singleblog{
+    width: 95%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: solid 2px #c4c4c4;
+    margin-bottom: 10px;
+    margin-left:40px;
+  
+    /* background-color: green; */
+}
+
+.singleblog img{
+    width: 50%;
+    margin-top: 3vh ;
+    align-self: center;
+    z-index: 2;
+}
+.singleblog p.content{
+    margin-left: 20px;
+    z-index: 1;
+    /* word-break:break-all; */
+    margin-right: 20px;
+}
+.singleblog p.author{
+    margin-left: 20px;
+    color: #c4c4c4;
+}
+.singleblog p.author .created{
+    margin-left: 10px;
+}
+
+
+main .retrievedcomments{
+    width: 95%;
+    flex: 1;
+    border: solid #c4c4c4 2px;
+    margin-left:40px;
+    display: block;
+}
+main .retrievedcomments p{
+    margin-left: 20px;
+}
+
+
+main .retrievedcomments .date{
+    margin-left: 10px;
+}
+
+main .addcomments{
+    width: 95%;
+    flex: 1;
+    /* background-color: rgb(23, 108, 184); */
+    margin-bottom: 10px;
+    border: solid #c4c4c4 2px;
+    margin-left:40px;
+    min-height: 200px;
+    overflow-y: scroll;
+}
+
+main .addcomments #comment{
+    margin-top: 20px;
+    height: 120px;
+    /* background-color: hotpink; */
+    /* overflow-y: scroll; */
+    width: 90%;
+    margin-left: 40px;
+}
+main .addcomments #addbtn{
+    margin-left: 40px;
+}

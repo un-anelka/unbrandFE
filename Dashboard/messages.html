@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UN R's Personal || Home</title>
-    <link rel="stylesheet" href="index.css">
+    <title>UN R's Personal || TEST_Dashboard</title>
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="messages.css">
 </head>
-<body>
 
+<body>
     <div class="container">
         <header>
             <!-- <a href="./index.html" class="logo" >UN Rdfgdsfgh</a> -->
@@ -29,8 +32,8 @@
                 <a href="../Blogs/blogs.html">
                     <h2>Blogs</h2>
                 </a>
-                <a href="../signin/SignIn.html">
-                    <h2>Sign In</h2>
+                <a href="#" id="logout">
+                    <h2>SignOut</h2>
                 </a>
             </nav>
             <div class="menu" onclick="myFunction(this)">
@@ -39,26 +42,51 @@
                 <div class="bar3"></div>
             </div>
         </header>
-        <main>
-          <div class="introduction">
-            <p class="intro A">
-                Hi, <span> I’m UN François RUDASINGWA</span>, a mechanical engineer by professional and Web developer by passion.
-                Having been born in rural area was like a reason for me not to success but I thrilled to announce that I was enrightned. 
-            </p>
-            <p class="intro B">
-I have a three years experience working with mechanical systems design and maintenance, I have worked on differnt projects suchs Pico Hydropower plants, Smart Wheelchair,  Gir’Ubuzima Box and more.
+       
 
-Apart from mechanical enginering, I am a full stack web developer focused on improing the web user experience.
+        <section class="message">
+             <div class="messagemanager">
+                <fieldset>
+                    <div>
+                        <h1><span id="querry"></span>QUERRIES</h1>
+                        
+                        <label for="name" class="title">Name:</label>
+                        <input type="text" id="name" name="name" />
+                    </div>
+                    <div>
+                        <label for="email" class="title">Email:</label>
+                        <input type="email" id="email" name="email" />
+                    </div>
+                    <div>
+                        <textarea class="textarea" style="min-height: 40px; border: 2px solid #c4c4c4"></textarea>
+                    </div>
+                </fieldset>  
+            </div>
 
-I do captive portal as well as remote monitoring of solar systems.
-            </p>
-          </div>
-          <div class="image">
-              <img src="./images/UN's Personal.jpg" alt="Put UN Image">
-          </div>
-    
-        </main>
-        
+            <div class="blogmanager">
+
+                <!-- <fieldset>
+                    <div>
+                        <p id="name" name="name"> <span>Name: </span> Name</p>
+                    </div>
+                    <div>
+                        <p id="email" name="email"> <span>Email: </span> Email</p>
+                    </div>
+                    <div>
+                        <p class="textarea" style="min-height: 40px; border: 2px solid #c4c4c4">hjkh</p>
+                    </div>
+                    <div class="blog-two">
+                        <a id=${element._id} class="myBtn" href=../Singlepage/single.html#${element._id}>ReadMore</a>
+                        <button class="delete-post" id="delete-post">Delete</button>
+                        <button class="edit" id="edit-post">Edit</button>
+                        <button class="update" id="update-post" >Update</button>
+
+                    </div>
+                </fieldset>              -->
+            </div>
+
+        </section>
+
         <footer>
             <div class="part-one">
                 <div class="newsletter">
@@ -98,6 +126,9 @@ I do captive portal as well as remote monitoring of solar systems.
         </footer>
     </div>
 
-    <script src="index.js"></script>
+    
+    <script src="messages.js"></script>
+
 </body>
+
 </html>

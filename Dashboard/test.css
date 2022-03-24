@@ -1,0 +1,400 @@
+/* @import url("./test.css"); */
+/* @import url("./dashboard.css"); */
+body{
+    padding: 0;
+    margin:0;
+    background-color: rgba(24, 23, 23, 0.69);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    color: white;
+}
+ div.container{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+ }
+
+ /* header design */
+header{
+    min-height: 8vh;
+    background-color: rgba(24, 23, 23, 1);
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+}
+
+header img{
+    flex: 0.2;
+    width: 50px;
+    /* height: 40px; */
+    padding: 10px 0 0 10px;
+    margin-top: 11px;
+}
+header nav{
+    flex:5;
+    display: flex;
+    flex-direction: row;
+    /* align-content: center; */
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    color: white;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+
+a#logo:hover{
+    /* background-color: yellow; */
+    background-color: rgba(24, 23, 23, 0.69);
+}
+a:hover{
+    background-color:white ;
+    color: rgba(24, 23, 23, 0.69);
+}
+/* Main design */
+
+main{
+    margin-top: 9vh;
+    height: 70Vh;
+    background-color: rgba(59, 58, 58, 0.69);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+main .introduction{
+    flex: 2.5;
+    text-transform: capitalize;
+    font-size: 18px;
+  
+}
+
+main .introduction p.intro{
+    color: white;
+    border:solid rgba(98, 139, 108, 0.69) 1px;
+    border-radius: 10px;
+    background-color: rgba(59, 58, 58, 0.69);
+    margin-left: 100px; 
+    /* width: 500px; */
+
+  /* margin-top: 2px;  */
+}
+main .introduction p.intro.A{
+  margin-bottom: 10px; 
+  font-size: 24px;
+  width: 500px;
+  /* background-color: red; */
+}
+
+main span{
+    color: rgba(235, 137, 8, 0.69);
+}
+main .introduction p.intro.B{
+  margin-top: 30px; 
+  /* background-color: red; */
+}
+
+
+main .image{
+    flex: 1; 
+    /* background-color: yellow;  */
+    padding-left: 100px;
+    
+}
+
+.image img{
+    margin-top: 30px;
+    border-radius: 30px;
+    height: 60vh;
+    padding-left: 400px;
+}
+
+
+
+/* footer design */
+footer{
+    display: flex;
+    flex-direction: row;
+    height: 22vh;
+    background-color: rgba(40, 43, 39, 0.99);
+}
+
+footer .part-one{
+    flex: 1;
+    display: flex;
+    border-right: 2px solid black;
+    flex-direction: column;
+}
+
+footer .part-one .newsletter{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+footer .part-one .newsletter p{
+    flex: 1;
+    margin: 10px 0 0 30px;
+    color: white;
+}
+footer .part-one .newsletter input[type="email"]{
+    flex: 0.85;
+    margin-left: 10px;
+    max-height: 22px; 
+    margin-top: 8px;
+    border-radius: 5px;
+    outline-style: none;
+}
+footer .part-one .newsletter input[type="submit"]{
+    background-color:rgba(235, 137, 8, 0.69);
+    margin-left: 2px;
+    flex: 0.45;
+    max-height: 27px; 
+    margin-top: 10px;
+    border-radius: 5px;
+    outline-style: none;
+    margin-right: 4px;
+    color: white;
+    
+}
+
+footer .part-one .socialmedia{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    /* border-top: solid red 2px; */
+}
+footer .part-one .icons{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+footer .part-one .socialmedia p{
+    color: rgba(219, 73, 15, 0.68);
+    margin-left: 30px;
+    margin-bottom: 3px;
+    margin-top: 0;
+}
+footer .part-one .socialmedia img{
+    width: 30px;
+    margin: 5px 10px 10px 5px;
+}
+
+footer .part-two{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+footer .part-two .content{
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    list-style:none;
+}
+li::before{
+    content: "\00BB";
+}
+
+footer .part-two .header{
+    font-size: 20px;
+}
+
+/* Dashboard */
+
+main.dashboard{
+    display: flex;
+    flex-direction: column;
+    min-height: 150vh;
+}
+
+
+.dashboard .usermanager{
+    flex:0.5;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 0vh; */
+    padding-top:50px;
+    border: #c4c4c4 solid 2px;
+    margin: 0 20px;
+}
+.dashboard .usermanager .tasklist{
+   flex:0.5;
+   border-right: solid 2px #c4c4c4;
+   color: white;
+}
+
+
+.dashboard .usermanager .createBlog{
+    flex: 1.5;
+    min-height:50vh;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 100%;
+}
+form .blogtext{
+    flex: 1;
+    display: flex;
+    /* background-color: rgb(177, 148, 17); */
+    flex-direction: column;
+    /* margin:20px; */
+    padding-left:10px;
+
+}
+
+
+
+form.addblog .blogtext #blog_title{
+    height: 40px;
+    padding-left: 20px;
+    /* border-radius: 2%; */
+    outline: hidden;
+}
+form.addblog .blogtext #blog_content{
+    margin-top: 10px;
+    min-height: 230px;
+    padding-left: 20px;
+    /* border-radius: 2%; */
+}
+
+form .blogupload{
+    align-items: center;
+    flex: 1;
+    display: flex;
+    /* background-color: rgb(231, 29, 170); */
+    flex-direction: row;
+}
+form.addblog .blogupload .uploadstatus{
+    /* background-color: green; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    flex:0.5;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+form.addblog .blogupload .uploadstatus #select{
+    margin-top: 3px;
+    height: 30px;
+    font-size: large;
+    text-align: center;
+}
+form.addblog .blogupload .uploadstatus #upload{
+   margin-top: 3px;
+   height: 30px;
+   font-size: large;
+   text-align: center; 
+}
+
+form.addblog .blogupload .imageinfo{
+    flex:1;
+    /* border-right: 2px solid rgb(71, 10, 185); */
+    height: 100%;
+    /* background-color: greenyellow; */
+}
+form.addblog .blogupload img#myimg{
+   margin-left: 50px;
+    height: 200px;
+    width:190px;
+    border:2px solid #c4c4c4;
+    margin-bottom: 10px;
+}
+form.addblog .blogupload #UpProgress{
+   border: 2px solid #c4c4c4;
+   height: 30x;
+   width: 140px;
+   margin-left: 50px;
+}
+
+
+.dashboard .blogmanager{
+    /* background-color: yellow; */
+    flex:1.5;
+    min-height: 50vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .blogmanager .blog-one{
+    display:flex;
+    flex-direction: row;
+    max-height: 30vh;
+    /* background-color: darkcyan; */
+    margin: 20px;
+}
+
+.dashboard .blogmanager .blog-one .content{
+    width:80%;
+    border-right: #c4c4c4 4px solid;
+    min-height:98%;
+    margin-bottom: 0;
+    margin-top:0;
+    margin-right: 10px;
+    border: 3px solid #c4c4c4;
+    padding-left: 10px;
+    /* background-color: aqua; */
+}
+
+.dashboard .blogmanager .blog-one .content h2{
+    margin: 0px 0 5px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.dashboard .blogmanager .blog-one .content p{
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    word-wrap: break-word; 
+    
+}
+.dashboard .blogmanager .blog-one img{
+    /* width: 20%; */
+    width: 200px;
+    height:98%;
+    margin-left: 40px;
+    border: solid 3px #c4c4c4;
+    border-radius: 2%;
+}
+
+.dashboard .blogmanager .blog-two{
+    display:inline;
+    margin: 20px;
+    margin-top: 0;
+}
+.dashboard .blogmanager .blog-two p{
+    display:inline;
+    margin-left: 30px;
+}
+
+main .blogmanager .blog-two p span{
+    margin-right:10px;
+    color: #c4c4c4;
+}
+
+a{
+    margin: 20px 2px 20px 20px;
+}
+
+#update, .delete{
+    cursor: pointer;
+}

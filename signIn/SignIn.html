@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UN R's Personal || SignUp</title>
-    <link rel="stylesheet" href="index.css">
+    <title>UN || SignIn</title>
+    <!-- <link rel="stylesheet" href="../index.css"> -->
+    <link rel="stylesheet" href="./signin.css">
 </head>
-<body >
+<body>
     <div class="container">
         <header>
-            <a href="./index.html"><img src="./images/UN logo.JPG" alt="Put logo such as UN R."></a>
+            <!-- <a href="./index.html" class="logo" >UN Rdfgdsfgh</a> -->
+            <a href="../index.html" id="logo"><img src="../images/UN logo.JPG" alt="Put logo such as UN R."></a>
             <nav>
-                <a href="./index.html"><h2>Home</h2></a>
-                <a href="./Skills.html"><h2>Skills</h2></a>
-                <a href="./services.html"><h2>Services</h2></a>
-                <a href="./ContactUs.html"><h2>Contact</h2></a>
-                <a href="./blog.html"><h2>Blogs</h2></a>
-                <a href="./SignIn.html"><h2>Sign In</h2></a>    
-                
+                <a href="../index.html">
+                    <h2>Home</h2>
+                </a>
+                <a href="../skills/Skills.html">
+                    <h2>Skills</h2>
+                </a>
+                <a href="../services/services.html">
+                    <h2>Services</h2>
+                </a>
+                <a href="../Contacts/contacts.html">
+                    <h2>Contact</h2>
+                </a>
+                <a href="../Blogs/blogs.html">
+                    <h2>Blogs</h2>
+                </a>
+                <a href="../signin/SignIn.html">
+                    <h2>Sign In</h2>
+                </a>
             </nav>
             <div class="menu" onclick="myFunction(this)">
                 <div class="bar1"></div>
@@ -28,47 +41,37 @@
         </header>
     
         <main class="signIn">
-            <form action="" method="post">
+            <!-- <form action="./dashboard.html" method="post"> -->
+            <form action="" method="get" class="login-form">
                 <fieldset>
-                    <legend>SignUp</legend>
+                    <legend>SignIn</legend>
                     <div>
-                        <label for="name" class="title">First Name:</label>
-                        <input type="text" id="firstname" name="name" />
+                        <label for="username" class="title">Username:</label>
+                        <input type="email" id="username1" name="username1" />
                     </div> <br>
                     <div>
-                        <label for="name" class="title"> Last Name:</label>
-                        <input type="text" id="lastname" name="name" />
-                    </div> <br>
-                    <div>
-                        <label for="username" class="title">Email:</label>
-                        <input type="email" id="username" name="username" />
-                    </div> <br>
-                    <div>
-                        <label for="password" class="title">Create Password:</label>
-                        <input type="password" id="password1" name="password" />
-                    </div> <br>
-                    <div>
-                        <label for="password" class="title">Confirm Password:</label>
-                        <input type="password" id="password2" name="password"/>
-                    </div>
-                    <div>
-                        <input type="submit" value="SignUp" id="submit" />
+                        <label for="password" class="title">Password:</label>
+                        <input type="password" id="password3" name="password3"/>
                     </div>
                     <div class="error">
-                        <p id="error"></p>
+                        <p id="signInError"></p>
                     </div>
                     <div>
-                        <p> Already registered? <a id="signIn" href="./SignIn.html"><span>   Login</span></a> </p>
+                        <input type="submit" value="SignIn" id="submit1" />
+                    </div>
+                    <div>
+                        <p>New user? <a id="signIn1" href="../signUp/signup.html"><span>   Create an account</span></a> </p>
                     </div>
                 </fieldset>    
             </form>
         </main>
+       
         <footer>
             <div class="part-one">
                 <div class="newsletter">
                     <p> Sign Up to our newsletter for the latest technology information</p>
-                    <input type="email" placeholder="Email address">
-                    <input type="submit" value="Subscribe">
+                    <input type="email" placeholder="Email address" id="subText"> <br>
+                    <input type="submit" value="Subscribe" id="subSend">
                 </div>
                 <div class="socialmedia">
                     <p> Social Media</p>
@@ -101,11 +104,13 @@
             </div>
         </footer>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script> 
-    <script src="index.js"></script>
-    <script src="./signUp.js"></script>
+    <script src="./index.js"></script>
+    <script src="./un.js"></script> -->
+    <script src="./signin.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
-/* @import url("./test.css"); */
-/* @import url("./dashboard.css"); */
+@import url("./test.css");
+@import url("./dashboard.css");
 body{
     padding: 0;
     margin:0;
