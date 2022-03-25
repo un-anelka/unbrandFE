@@ -7,10 +7,11 @@ const upload = document.getElementById("upload");
 let blogmanager = document.querySelector(".blogmanager");
 let btnSubmit = document.querySelector(".btnUpdate");
 let signOut = document.querySelector("#logout");
+let token = JSON.parse(localStorage.getItem('storedtoken'));
 
-// const update=document.querySelector(".update");
-// upload.addEventListener("click", addPost)
-
+if (!token) {
+    window.location.href = "../signIn/SignIn.html"
+}
 // GET ALL BLOGS
 fetch("http://localhost:4400/getAllblogs")
     .then(res => res.json())
@@ -170,7 +171,7 @@ blogmanager.addEventListener("click", (e) => {
     let id = e.target.parentElement.parentElement.id
     // console.log(e.target.className)
 
-    const token = JSON.parse(localStorage.getItem('storedtoken'));
+    let token = JSON.parse(localStorage.getItem('storedtoken'));
 
     if (e.target.className === "myBtn") {
         console.log(e.target.id)

@@ -110,14 +110,4 @@ addbtn.addEventListener("click", (e) => {
 
 
 
-// { _id: '623c7e56e792de56635646b9', author: 'UN', title: 'UNUNU', content: 'fghvjf hjbkfbhvajkfb fjk bh\njh ahv hfghvjf hjbkfbh…k bh\njh ahv hfghvjf hjbkfbhvajkfb fjk bh\njh ahv h', image: 'https://firebasestorage.googleapis.com/v0/b/un-r-s…=media&token=d7eba26d-0ad8-44ae-8aab-a45ae190396b', … }
-// author: "UN"
-// comments: Array(3)
-// 0:
-// data: { content: 'I like this post for sure.\n\n\nBring many more' }
-// date: 1648202868668
-// username: "UN RUDASINGWA"
-// [[Prototype]]: Object
-// 1: { username: 'UN RUDASINGWA', data: {… }, date: 1648203061523 }
-// 2: { username: 'UN RUDASINGWA', data: {… }, date: 1648203286873 }
-// length: 3
+
