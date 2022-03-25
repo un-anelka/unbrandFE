@@ -3,10 +3,10 @@
 let select = document.getElementById("select");
 const blogtitle = document.getElementById("blog_title");
 const blogcontent = document.getElementById("blog_content");
-const upload=document.getElementById("upload");
-let blogmanager= document.querySelector(".blogmanager");
-let btnSubmit=document.querySelector(".btnUpdate");
-let signOut=document.querySelector("#logout");
+const upload = document.getElementById("upload");
+let blogmanager = document.querySelector(".blogmanager");
+let btnSubmit = document.querySelector(".btnUpdate");
+let signOut = document.querySelector("#logout");
 
 // const update=document.querySelector(".update");
 // upload.addEventListener("click", addPost)
@@ -21,7 +21,7 @@ fetch("http://localhost:4400/getAllblogs")
         const retrivedArray = blogdata.data;
 
 
-        let output="";
+        let output = "";
         // let blogmanager= document.querySelector(".blogmanager");
 
         retrivedArray.forEach(element => {
@@ -32,9 +32,9 @@ fetch("http://localhost:4400/getAllblogs")
             // console.log(element.content)
             // console.log(element)
             //console.log(text_truncate(element.content))
-            let str=text_truncate(element.content)
+            let str = text_truncate(element.content)
             //     let blogmanager= document.querySelector(".blogmanager");
-          
+
 
             //     let div=document.createElement("div");
             //     div.setAttribute("id", `${element._id}`);
@@ -49,13 +49,13 @@ fetch("http://localhost:4400/getAllblogs")
             //     blog_two.classList="blog-two";
             //     blog_image.classList="blog-image";
             //     blog_content.classList="content";
-                
-          
+
+
 
             //     blog_content.innerHTML=`
             //                                 <h2 id="title#${element._id}">${element.title}</h2>
             //                                 <p id="blogcontent#${element._id}"> ${str}</p>
-                                            
+
 
             //                            `
             //     blog_image.innerHTML=`
@@ -73,8 +73,8 @@ fetch("http://localhost:4400/getAllblogs")
 
             //     blog_one.appendChild(blog_content);
             //     blog_one.appendChild(blog_image);
-                
-                
+
+
             //     div.appendChild(blog_one);
             //     div.appendChild(blog_two);
             //     blogmanager.appendChild(div)
@@ -82,7 +82,7 @@ fetch("http://localhost:4400/getAllblogs")
             // // new format
             //<img src="../images/M.E.png" alt="blog image blog" data-id=${element.title}>
 
-            output+=`
+            output += `
             <div id=${element._id}>
             <div class="blog-one">
                 <div class="content">
@@ -106,129 +106,137 @@ fetch("http://localhost:4400/getAllblogs")
         </div>
             `;
         });
-        blogmanager.innerHTML=output
+        blogmanager.innerHTML = output
     }
     )
 
-{/* <button type="submit"><i class="fa fa-comment" style="color: rgb(32, 21, 16);"></i></button> */}
+{/* <button type="submit"><i class="fa fa-comment" style="color: rgb(32, 21, 16);"></i></button> */ }
 
-function addPost(){
+function addPost() {
     // e.preventDefault();
 
-    let title=document.getElementById("blog_title");
-    let content=document.getElementById("blog_content");
-    const token=JSON.parse(localStorage.getItem('storedtoken'));
+    let title = document.getElementById("blog_title");
+    let content = document.getElementById("blog_content");
+    const token = JSON.parse(localStorage.getItem('storedtoken'));
     // const author=JSON.parse(localStorage.getItem('author'))
     // console.log(token)
 
-    fetch("http://localhost:4400/createBlog",{
+    fetch("http://localhost:4400/createBlog", {
         method: "POST",
         headers: {
-            "Accept":"application/json, text/plain, */*",
-            "Content-type":"application/json",
+            "Accept": "application/json, text/plain, */*",
+            "Content-type": "application/json",
             'Authorization': `Bearer ${token}`
         },
-        body: JSON.stringify({title: title.value, content: content.value, image:ImgUrl})
-        
+        body: JSON.stringify({ title: title.value, content: content.value, image: ImgUrl })
+
     })
-    .then(res=>res.json())
-    .then(posts=>{
-        console.log(posts);
-        alert("Blog has been successfully created");
-        location.reload();
-    })
-    .catch(err=>{
-        console.log(err);
-    })
+        .then(res => res.json())
+        .then(posts => {
+            console.log(posts);
+            alert("Blog has been successfully created");
+            location.reload();
+        })
+        .catch(err => {
+            console.log(err);
+        })
 }
 
 
-text_truncate = function(str, length, ending) {
+text_truncate = function (str, length, ending) {
     if (length == null) {
-      length = 700;
+        length = 700;
     }
     if (ending == null) {
-      ending = '...';
+        ending = '...';
     }
     if (str.length > length) {
-      return str.substring(0, length - ending.length) + ending;
+        return str.substring(0, length - ending.length) + ending;
     } else {
-      return str;
+        return str;
     }
-  };
+};
 
 
 
-//FUnction update version 2
+//Function update version 2
 
-blogmanager.addEventListener("click", (e)=>{
-   
+blogmanager.addEventListener("click", (e) => {
+
     e.preventDefault();
-    let deleteBtnpressed=e.target.id=="delete-post";
-    let editBtnpressed=e.target.id=="edit-post";
-    let updateBtnpressed=e.target.id=="update-post";
-    let id=e.target.parentElement.parentElement.id 
+    let deleteBtnpressed = e.target.id == "delete-post";
+    let editBtnpressed = e.target.id == "edit-post";
+    let updateBtnpressed = e.target.id == "update-post";
+    let id = e.target.parentElement.parentElement.id
     // console.log(e.target.className)
-    let url="http://localhost:4400/deleteblog";
-    const token=JSON.parse(localStorage.getItem('storedtoken'));
 
-    if (e.target.className==="myBtn"){
-        window.location.href=`../Singlepage/single.html#${id}`;
+    const token = JSON.parse(localStorage.getItem('storedtoken'));
+
+    if (e.target.className === "myBtn") {
+        console.log(e.target.id)
+        let thisID = e.target.id;
+        window.location.href = `../Singlepage/single.html?id=${id}`;
+
     }
 
     // Delete request
-    if(deleteBtnpressed){
+    if (deleteBtnpressed) {
         // console.log("remove post");
+        let url = "http://localhost:4400/deleteblog";
         fetch(`${url}/${id}`, {
             method: "DELETE",
             headers: {
-                "Accept":"application/json, text/plain, */*",
-                "Content-type":"application/json",
+                "Accept": "application/json, text/plain, */*",
+                "Content-type": "application/json",
                 'Authorization': `Bearer ${token}`
-        }})
-        .then(res=>res.json())
-        .then(()=>location.reload())
+            }
+        })
+            .then(res => res.json())
+            .then(() => location.reload())
+
     }
 
-    if (editBtnpressed){
+    if (editBtnpressed) {
         console.log("edit post");
-        const parent=e.target.parentElement.parentElement;
+        const parent = e.target.parentElement.parentElement;
         // console.log(parent);
-        let title_content =parent.querySelector("#title").textContent;
-        let blog_content =parent.querySelector("#blogcontent").textContent;
+        let title_content = parent.querySelector("#title").textContent;
+        let blog_content = parent.querySelector("#blogcontent").textContent;
         // console.log(blog_content)
-        blogtitle.value=title_content;
-        blogcontent.value=blog_content;
+        blogtitle.value = title_content;
+        blogcontent.value = blog_content;
+
 
     }
-    if (updateBtnpressed){
-    
-    let url="http://localhost:4400/updateblog"
-        fetch(`${url}/${id}`,{
+    if (updateBtnpressed) {
+
+        let url = "http://localhost:4400/updateblog"
+        fetch(`${url}/${id}`, {
             method: "PUT",
             headers: {
-                "Accept":"application/json, text/plain, */*",
-                "Content-type":"application/json",
+                "Accept": "application/json, text/plain, */*",
+                "Content-type": "application/json",
                 'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify({
-            title: blogtitle.value,
-            content: blogcontent.value
+            },
+            body: JSON.stringify({
+                title: blogtitle.value,
+                content: blogcontent.value
+            })
         })
-    })
-    .then (res=>res.json())
-    .then(()=> location.reload())
-}
+            .then(res => res.json())
+            .then(() => location.reload())
+        // return thisID
+    }
 
 })
 
+// console.log(thisID)
 
-
-signOut.addEventListener("click", (e)=>{
+signOut.addEventListener("click", (e) => {
     e.preventDefault();
     console.log("User logged out");
     localStorage.removeItem('storedtoken');
-    window.location.href='../signin/signIn.html';
+    window.location.href = '../signin/signIn.html';
 })
 
 
@@ -239,7 +247,7 @@ signOut.addEventListener("click", (e)=>{
 //     let title=document.getElementById("blog_title");
 //     let content=document.getElementById("blog_content");
 //     const token=JSON.parse(localStorage.getItem('storedtoken'));
-   
+
 //     fetch("http://localhost:4400/createBlog",{
 //         method: "POST",
 //         headers: {
@@ -248,7 +256,7 @@ signOut.addEventListener("click", (e)=>{
 //             'Authorization': `Bearer ${token}`
 //         },
 //         body: JSON.stringify({title: title.value, content: content.value, image: ImgUrl})
-        
+
 //     })
 //     .then(res=>res.json())
 //     .then(posts=>{
@@ -259,7 +267,7 @@ signOut.addEventListener("click", (e)=>{
 //     .catch(err=>{
 //         console.log(err);
 //     })
-  
+
 // }
 
 
@@ -318,7 +326,7 @@ document.getElementById("upload").onclick = function (e) {
     ImgName = files[0].name;
     console.log(files[0])
 
-    
+
     var uploadTask = firebase.storage().ref("Images_Test_UNUN/" + ImgName).put(files[0]);
 
 
@@ -334,26 +342,26 @@ document.getElementById("upload").onclick = function (e) {
             uploadTask.snapshot.ref.getDownloadURL().then(function (url) {
                 ImgUrl = url;
                 addPost();
-                })
-        } 
-        )
-        
-    }
-    
-    // const submit=document.querySelector("#subSend");
-    // const subText=document.querySelector("#subText");
-    
-    
-    
-    submit.addEventListener("click", (e)=>{
-        e.preventDefault();
-        fetch("http://localhost:4400/createsubscription", {
+            })
+        }
+    )
+
+}
+
+// const submit=document.querySelector("#subSend");
+// const subText=document.querySelector("#subText");
+
+
+
+submit.addEventListener("click", (e) => {
+    e.preventDefault();
+    fetch("http://localhost:4400/createsubscription", {
         method: "POST",
         headers: {
-            "Accept":"application/json, text/plain, */*",
-            "Content-type":"application/json"
+            "Accept": "application/json, text/plain, */*",
+            "Content-type": "application/json"
         },
-        body: JSON.stringify({email: subText.value})
+        body: JSON.stringify({ email: subText.value })
     })
         .then(res => res.json())
         .then(subscriptiondata => {
@@ -361,11 +369,8 @@ document.getElementById("upload").onclick = function (e) {
             console.log(subscriptiondata);
             location.reload();
         })
-    
+
     // console.log("clicked")
     // console.log(subText.value)
-    
-    })
-            
 
-            
+})
