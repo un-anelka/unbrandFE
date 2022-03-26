@@ -1,0 +1,17 @@
+main{
+    height: 140vh;
+    overflow-y: scroll;
+}
+
+.blogone{
+    margin-top: 40px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.blog-image img{
+    width: 400px;
+}
+
