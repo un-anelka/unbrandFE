@@ -53,16 +53,16 @@ fetch("http://localhost:4400/getAllblogs")
             let str = text_truncate(element.content)
 
             output += `
-            <div id=${element._id}>
+            <div id=${element._id} class="blog-format">
             <div class="blog-one">
-                <div class="blog-image">
+                    <div class="blog-image">
 
-                    <img src=${element.image} alt="blog image blog" data-id=${element.title}>
-                </div>    
-            <div class="content">
-                    <h2 id="title">${element.title}</h2>
-                    <p id="blogcontent"> ${str}</p>
-            </div>
+                        <img src=${element.image} alt="blog image blog" data-id=${element.title}>
+                    </div>    
+                <div class="content">
+                        <h2 id="title">${element.title}</h2>
+                        <p id="blogcontent"> ${str}</p>
+                </div>
                 
 
             </div>

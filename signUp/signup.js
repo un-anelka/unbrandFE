@@ -8,109 +8,111 @@ const error = document.getElementById("error");
 const username = document.getElementById("username");
 
 
-////Event listeners
-// submit.addEventListener("click", submitFunc);
+//Event listeners
+submit.addEventListener("click", submitFunc);
 
-// //Functions
-// function submitFunc(e) {
+//Functions
+function submitFunc(e) {
 
-//   e.preventDefault();
-//   console.log("Hello UN")
-//   if (firstname.value == 0 || lastname.value == 0 || username.value == 0 || password1.value == 0 || password2.value == 0) {
-//     error.innerHTML = "Please fill empty fields"
-//   }
+    e.preventDefault();
+    console.log("Hello UN")
+    if (firstname.value == 0 || lastname.value == 0 || username.value == 0 || password1.value == 0 || password2.value == 0) {
+        error.innerHTML = "Please fill empty fields"
+    }
 
-//   else if (password1.value != password2.value) {
-//     error.innerHTML = "Password mismatch"
-//   }
+    else if (password1.value != password2.value) {
+        error.innerHTML = "Password mismatch"
+    }
 
-//   else {
-//     let url="http://localhost:4400";
-//     fetch(url,
-//       {
-//         method: "POST",
-//         headers: {
-//             "Accept":"application/json, text/plain, */*",
-//             "Content-type":"application/json"
-//         }
-        
-//         ,
-//         body: JSON.stringify({
-//           firstname: firstname.value,
-//           lastname: lastname.value,
-//           email: username.value
-//       })
-        
+    else {
+        console.log("UN")
+        let url = "http://localhost:4400";
+        fetch(url,
+            {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json, text/plain, */*",
+                    "Content-type": "application/json"
+                }
+
+                ,
+                body: JSON.stringify({
+                    firstname: firstname.value,
+                    lastname: lastname.value,
+                    email: username.value,
+                    password: password1.value
+                })
+
+            })
+            .then(res => res.json())
+            .then(posts => {
+                console.log(posts);
+                // alert("User has been successfully created");
+                location.reload();
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+
+}
+
+
+// submit.addEventListener("click", (e)=>{
+
+// e.preventDefault();
+// console.log("UN")
+//   let url="http://localhost:4400";
+//   fetch(url,
+//     {
+//       method: "POST",
+//       headers: {
+//           "Accept":"application/json, text/plain, */*",
+//           "Content-type":"application/json"
+//       }
+
+//       ,
+//       body: JSON.stringify({
+//         firstname: firstname.value,
+//         lastname: lastname.value,
+//         email: username.value,
+//         password: password1.value
 //     })
-//     .then(res=>res.json())
-//     .then(posts=>{
-//         console.log(posts);
-//         // alert("User has been successfully created");
-//         // location.reload();
-//     })
-//     .catch(err=>{
-//         console.log(err);
-//     })
-//   }
 
-// }
+//   })
+//   .then(res=>res.json())
+//   .then(posts=>{
+//       console.log(posts);
+//       // alert("User has been successfully created");
+//       // location.reload();
+//   })
 
 
-submit.addEventListener("click", (e)=>{
+// });
 
-e.preventDefault();
-console.log("UN")
-  let url="http://localhost:4400";
-  fetch(url,
-    {
-      method: "POST",
-      headers: {
-          "Accept":"application/json, text/plain, */*",
-          "Content-type":"application/json"
-      }
-      
-      ,
-      body: JSON.stringify({
-        firstname: firstname.value,
-        lastname: lastname.value,
-        email: username.value,
-        password: password1.value
-    })
-      
-  })
-  .then(res=>res.json())
-  .then(posts=>{
-      console.log(posts);
-      // alert("User has been successfully created");
-      // location.reload();
-  })
-
-
-});
-
-const submit=document.querySelector("#subSend");
-const subText=document.querySelector("#subText");
+const submit12 = document.querySelector("#subSend");
+const subText = document.querySelector("#subText");
 
 
 
-submit.addEventListener("click", (e)=>{
+submit12.addEventListener("click", (e) => {
     e.preventDefault();
     fetch("http://localhost:4400/createsubscription", {
-    method: "POST",
-    headers: {
-        "Accept":"application/json, text/plain, */*",
-        "Content-type":"application/json"
-    },
-    body: JSON.stringify({email: subText.value})
-})
-    .then(res => res.json())
-    .then(subscriptiondata => {
-        // res.json(subscriptiondata)
-        console.log(subscriptiondata);
-        location.reload();
+        method: "POST",
+        headers: {
+            "Accept": "application/json, text/plain, */*",
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify({ email: subText.value })
     })
+        .then(res => res.json())
+        .then(subscriptiondata => {
+            // res.json(subscriptiondata)
+            console.log(subscriptiondata);
+            location.reload();
+        })
 
-// console.log("clicked")
-// console.log(subText.value)
+    // console.log("clicked")
+    // console.log(subText.value)
 
 })

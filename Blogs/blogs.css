@@ -1,17 +1,33 @@
-main{
-    height: 140vh;
-    overflow-y: scroll;
+body {
+  color: white;
 }
 
-.blogone{
-    margin-top: 40px;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
+main {
+  margin-left: 3px;
+  height: 140vh;
+  overflow-y: scroll;
 }
 
-.blog-image img{
-    width: 400px;
+.blogone {
+  margin-top: 40px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  /* border: solid #c4c4c4 2px; */
 }
 
+.blog-image img {
+  width: 400px;
+}
+
+.blog-format {
+  border: solid #c4c4c4 2px;
+  min-width: 900px;
+  padding: 30px;
+  overflow: scroll;
+}
+
+.comments {
+  margin-right: 10px;
+}
