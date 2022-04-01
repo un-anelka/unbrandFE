@@ -7,7 +7,7 @@ const subText = document.querySelector("#subText");
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();
-    fetch("http://localhost:4400/createsubscription", {
+    fetch("https://my-brandun.herokuapp.com/createsubscription", {
         method: "POST",
         headers: {
             "Accept": "application/json, text/plain, */*",
@@ -33,7 +33,9 @@ submit.addEventListener("click", (e) => {
 let blogone = document.querySelector(".blogone");
 
 // GET ALL BLOGS
-fetch("http://localhost:4400/getAllblogs")
+let url = "https://my-brandun.herokuapp.com/getAllblogs"
+fetch(url)
+    // fetch("https://my-brandun.herokuapp.com/getAllblogs")
     .then(res => res.json())
     .then(blogdata => {
 

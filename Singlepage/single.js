@@ -11,7 +11,7 @@ const subText = document.querySelector("#subText");
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();
-    fetch("http://localhost:4400/createsubscription", {
+    fetch("https://my-brandun.herokuapp.com/createsubscription", {
         method: "POST",
         headers: {
             "Accept": "application/json, text/plain, */*",
@@ -35,7 +35,7 @@ submit.addEventListener("click", (e) => {
 
 
 // GET SINGLE BLOG
-let url = "http://localhost:4400/getOneblog";
+let url = "https://my-brandun.herokuapp.com/getOneblog";
 fetch(`${url}/${id}`)
     .then(res => res.json())
     .then(blogdata => {
@@ -87,7 +87,7 @@ let allcomments = document.querySelector(".allcomments");
 
 addbtn.addEventListener("click", (e) => {
     e.preventDefault();
-    let url = "http://localhost:4400/getOneblog";
+    let url = "https://my-brandun.herokuapp.com/getOneblog";
     let idcomment = "comments";
     fetch(`${url}/${id}/${idcomment}`, {
         method: "POST",

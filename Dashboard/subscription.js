@@ -12,7 +12,7 @@ if (!token) {
 }
 console.log(token)
 // GET ALL USERS
-fetch("http://localhost:4400/getAllsubscriptions/", {
+fetch("https://my-brandun.herokuapp.com/getAllsubscriptions/", {
     // method: "GET",
     headers: {
         "Accept": "application/json, text/plain, */*",
@@ -68,7 +68,7 @@ userAdd.addEventListener("click", (e) => {
     let editBtnpressed = e.target.id == "edituser";
     let updateBtnpressed = e.target.id == "update";
     let id = e.target.parentElement.parentElement.id
-    let url = "http://localhost:4400/deletesubscription";
+    let url = "https://my-brandun.herokuapp.com/deletesubscription";
     const token = JSON.parse(localStorage.getItem('storedtoken'));
 
     // Delete request
@@ -101,7 +101,7 @@ userAdd.addEventListener("click", (e) => {
     }
     if (updateBtnpressed) {
         console.log("updated users");
-        let url = "http://localhost:4400/updatesubscription"
+        let url = "https://my-brandun.herokuapp.com/updatesubscription"
         fetch(`${url}/${id}`, {
             method: "PUT",
             headers: {
@@ -133,7 +133,7 @@ console.log(submit)
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();
-    fetch("http://localhost:4400/createsubscription", {
+    fetch("https://my-brandun.herokuapp.com/createsubscription", {
         method: "POST",
         headers: {
             "Accept": "application/json, text/plain, */*",

@@ -5,7 +5,7 @@ const subTexts = document.querySelector("#subText");
 
 submitx.addEventListener("click", (e) => {
     e.preventDefault();
-    fetch("http://localhost:4400/createsubscription", {
+    fetch("https://my-brandun.herokuapp.com/createsubscription", {
         method: "POST",
         headers: {
             "Accept": "application/json, text/plain, */*",
@@ -34,7 +34,7 @@ console.log(querysubmit)
 
 querysubmit.addEventListener("submit", (e) => {
     e.preventDefault();
-    let url = "http://localhost:4400/createcontact";
+    let url = "https://my-brandun.herokuapp.com/createcontact";
     fetch(`${url}`, {
         method: "POST",
         headers: {

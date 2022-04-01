@@ -26,7 +26,7 @@ function submitFunc(e) {
 
     else {
         console.log("UN")
-        let url = "http://localhost:4400";
+        let url = "https://my-brandun.herokuapp.com/";
         fetch(url,
             {
                 method: "POST",
@@ -97,7 +97,7 @@ const subText = document.querySelector("#subText");
 
 submit12.addEventListener("click", (e) => {
     e.preventDefault();
-    fetch("http://localhost:4400/createsubscription", {
+    fetch("https://my-brandun.herokuapp.com/createsubscription", {
         method: "POST",
         headers: {
             "Accept": "application/json, text/plain, */*",

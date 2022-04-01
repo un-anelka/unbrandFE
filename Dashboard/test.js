@@ -13,7 +13,7 @@ if (!token) {
     window.location.href = "../signIn/SignIn.html"
 }
 // GET ALL BLOGS
-fetch("http://localhost:4400/getAllblogs")
+fetch("https://my-brandun.herokuapp.com/getAllblogs")
     .then(res => res.json())
     .then(blogdata => {
 
@@ -122,7 +122,7 @@ function addPost() {
     // const author=JSON.parse(localStorage.getItem('author'))
     // console.log(token)
 
-    fetch("http://localhost:4400/createBlog", {
+    fetch("https://my-brandun.herokuapp.com/createBlog", {
         method: "POST",
         headers: {
             "Accept": "application/json, text/plain, */*",
@@ -183,7 +183,7 @@ blogmanager.addEventListener("click", (e) => {
     // Delete request
     if (deleteBtnpressed) {
         // console.log("remove post");
-        let url = "http://localhost:4400/deleteblog";
+        let url = "https://my-brandun.herokuapp.com/deleteblog";
         fetch(`${url}/${id}`, {
             method: "DELETE",
             headers: {
@@ -211,7 +211,7 @@ blogmanager.addEventListener("click", (e) => {
     }
     if (updateBtnpressed) {
 
-        let url = "http://localhost:4400/updateblog"
+        let url = "https://my-brandun.herokuapp.com/updateblog"
         fetch(`${url}/${id}`, {
             method: "PUT",
             headers: {
@@ -249,7 +249,7 @@ signOut.addEventListener("click", (e) => {
 //     let content=document.getElementById("blog_content");
 //     const token=JSON.parse(localStorage.getItem('storedtoken'));
 
-//     fetch("http://localhost:4400/createBlog",{
+//     fetch("https://my-brandun.herokuapp.com/createBlog",{
 //         method: "POST",
 //         headers: {
 //             "Accept":"application/json, text/plain, */*",
@@ -356,7 +356,7 @@ document.getElementById("upload").onclick = function (e) {
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();
-    fetch("http://localhost:4400/createsubscription", {
+    fetch("https://my-brandun.herokuapp.com/createsubscription", {
         method: "POST",
         headers: {
             "Accept": "application/json, text/plain, */*",

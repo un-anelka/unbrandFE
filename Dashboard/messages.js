@@ -22,7 +22,7 @@ if (!token) {
 
 
 // GET ALL BLOGS
-fetch("http://localhost:4400/getAllcontacts", {
+fetch("https://my-brandun.herokuapp.com/getAllcontacts", {
     headers: {
         "Accept": "application/json, text/plain, */*",
         "Content-type": "application/json",
@@ -79,7 +79,7 @@ blogmanager.addEventListener("click", (e) => {
     let id = e.target.parentElement.parentElement.id
     // console.log(e.target.parentElement.parentElement)
     // console.log(id);
-    let url = "http://localhost:4400/deletecontact";
+    let url = "https://my-brandun.herokuapp.com/deletecontact";
     const token = JSON.parse(localStorage.getItem('storedtoken'));
 
 
@@ -116,7 +116,7 @@ blogmanager.addEventListener("click", (e) => {
     if (updateBtnpressed) {
         // console.log("edit post");
         console.log(id)
-        let url = "http://localhost:4400/updatecontact"
+        let url = "https://my-brandun.herokuapp.com/updatecontact"
         fetch(`${url}/${id}`, {
             method: "PUT",
             headers: {
@@ -158,7 +158,7 @@ signOut.addEventListener("click", (e) => {
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();
-    fetch("http://localhost:4400/createsubscription", {
+    fetch("https://my-brandun.herokuapp.com/createsubscription", {
         method: "POST",
         headers: {
             "Accept": "application/json, text/plain, */*",
